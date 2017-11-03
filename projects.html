@@ -1,0 +1,71 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="blurb">
+	<p>Code for the following projects can be found on my <a href="https://github.com/amyhhua/">Github</a>.</p>
+	<h4>Projects:</h4>
+	<ul>
+		<li><h4><a href="#thesis">Senior Thesis: Learning the Structure of Price Stickiness in Scanner Data</a></h4>
+		<li><h4><a href="#learn2shop">Learn2Shop: Using Convolutional Neural Nets to Generate Custom Shopping Recommendations</a></h4>
+		<li ><h4><a href="#yelp">Analyzing Restaurant Review Data Using NLP Techniques</a></h4>
+	</ul>
+
+	<hr noshade>
+
+	<!-- SENIOR THESIS -->
+	<a name="thesis"></a><h3>Senior Thesis: Learning the Structure of Price Stickiness in Scanner Data.</h3>
+	<i>Advised by <a href="http://www.princeton.edu/~sims/">Professor Chris Sims</a>.</i>
+	<br/><br/>
+	<p>A substantial portion of the macroeconomics literature suggests that demand shocks have noteworthy effects on real output. One prevailing theory for rationalizing the large effects of demand shocks on output is that nominal prices are not perfectly flexible. Our work aims to extend the empirical literature studying price stickiness by using models and techniques from Bayesian statistics and machine learning. We analyze a high-frequency scanner dataset and focus on algorithmically identifying price setting periods for any given product and characterizing a set of regular prices within price setting periods, given only the values of the price time series. Our work departs from the existing literature in three important ways. For each product, we flexibly identify price setting periods without making any assumptions on the length of the periods or the number of periods. Additionally, we do not simply study one regular, or reference, price. Instead, we identify several "modal" prices from the data that correspond to the peaks of the price distributions for the identified price setting periods. Finally, we develop highly clusterable and interpretable metrics for price stickiness, which we demonstrate with an easily separable clustering of the products into two clean groups of highly sticky and non-sticky products.
+	<br/><br/>
+	</p>
+
+	<!-- SHOPPING PROJECT -->
+	<a name="learn2shop"></a><h3>Learn2Shop: Using Convolutional Neural Nets to Generate Custom Shopping Recommendations</h3>
+	<p>Given a person's fashion preferences, which clothing products are they likely to be interested in purchasing? Browsing through shopping websites can take up a lot of time, so I wanted to create a tool that would filter out products I probably wouldn't consider buying. I also wanted to learn a bit about my personal preferences!
+	<br/><br/>
+	I automated scraping of 26K images of all dresses available on select shopping websites. I then built a GUI to annotate the image dataset with my preferences and labeled each set of images corresponding to a particular dress with a rating of either 1 or 0 (1 indicating that I would be interested in purchasing the dress and 0 representing that I would not buy the product).
+	<br/><br/>
+	<img src="project_files/learn2shop_gui_demo.gif" class="post_image">
+	<br/><br/>
+	I then used transfer learning with convolutional neural networks to learn the hand-assigned scores and generate personalized dress recommendations, training a new top layer of the CNN with an Inception v3 architecture model using TensorFlow, and achieved over 70% out-of-sample accuracy. With this tool, I can periodically have personalized recommendations sent automatically to myself as new products on my favorite shopping sites are added!
+	<br/><br/>
+	</p>
+
+	<!-- YELP PROJECT -->
+	<a name="yelp"></a><h3>Analyzing Restaurant Review Data Using NLP Techniques</h3>
+	<p>Can word vectors help predict the quality of a restaurant? Let's take a look at the Yelp restaurant review dataset. I use <a href="http://spacy.io/">spaCy</a> for some of the text pre-processing and analysis in this analysis.
+	<br/><br/>
+	First, we can get a sense of what kind of words we should be looking into. The following word cloud documents the words that appear the most.
+	<br/><br/>
+	<img src="project_files/wordcloud_plate.png" class="post_image">
+	<br/><br/>
+	To limit the size of the corpus, I focused the rest of my analysis on the reviews of Boston restaurants (there are nearly 2,000 restaurants in Boston alone, adding up to over 30 million words in the entire corpus). We look at Boston's word cloud and can see quite a few mentions of seafood (lobster, fish, calamari), which is not surprising, given the city.
+	<br/><br/>
+	<img src="project_files/wordcloud_plate_boston.png" class="post_image">
+	<br/><br/>
+	I noticed that a key factor that contributes to how much my friends and I enjoy a restaurant experience is the restaurant ambiance---particularly, whether the restaurant is clean. The City of Boston actually released health inspection scores for restaurants, for which we already have text reviews, so we can turn this problem into a binary classification one---whether a restaurant passes sanitation inspections or fails them.
+	<br/><br/>
+	Can we find key word vectors that capture the cleanliness of a restaurant? We can start by analyzing the word "dirty." For each restaurant, I calculated the cosine similarity between the word vector for "dirty" and the word vector for each word in each review for the restaurant, then added all the cosine similarities and divided by the number of words associated with each restaurant. The following plots my score of "dirtiness" for all the restaurants:
+	<br/><br/>
+	<img src="project_files/word_similarity_scores_spread_all_restaurants_dirty.png" class="post_image">
+	<br/><br/>
+	It looks like these scores of dirtiness are too close together to be useful. I looked at the closest words to "dirty" in the spaCy corpus and, unsurprisingly, there are a few unique definitions, while we only want to focus on one. Let's hold off on trying a more complicated method just now; what other some other features that we could look at? How about the friendliness of the staff/service? The following plots scores of "friendliness" (calculated using the word vector for "friendly"):
+	<br/><br/>
+	<img src="project_files/word_similarity_scores_spread_all_restaurants_friendly.png" class="post_image">
+	<br/><br/>
+	Slightly better, but still not much variance in these scores. Let's try representing each restaurant's whole document with a vector. Do these scores change if we use whole document vectors, rather than individual word vectors?
+	<br/><br/>
+	<img src="project_files/document_similarity_scores_spread_all_restaurants_dirty.png" class="post_image">
+	<br/><br/>
+	So the document vectors show a greater spread. I don't expect to be able to build a good classifier with such word vectors, but let's give it a shot. Using word vectors for a list of words with similar spreads, including "dirty," "friendly," "fresh," "seasonal," "nutritious," "delicious," "filthy," "greasy," "moldy," "messy," "inedible," I first tried ridge regression to try to predict a (normalized) score of health inspection violations, which yielded a prediction accuracy rate of 54% (with binary classification, the probability of choosing the right label already is 50%, so this ). Since SVM is good for 0/1 classification with a small sample size, it might perform better in this context. Using a linear kernel function, I obtained 67% out-of-sample accuracy.
+	<br/><br/>
+	Now, instead of using the built-in document vectors in spaCy, let's try using a weighted average of the words in the reviews, for each individual review.
+	<br/><br/>
+	[Check back soon for more!]
+	</p>
+
+	<!-- CHROME EXTENSION -->
+</div>
