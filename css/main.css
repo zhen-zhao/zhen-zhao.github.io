@@ -1,0 +1,81 @@
+body {
+    margin: 60px auto;
+    width: 60%;
+}
+nav ul, footer ul {
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-weight: bold;
+    padding: 0px;
+    list-style: none;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-size: 1.3em;
+}
+a {
+    text-decoration: none;
+    color: #00a3cc;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-size: 2.5em;
+}
+h2 {
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-size: 1.6em;
+    color: #333;
+}
+h3 {
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-size: 1.7em;
+    color: #f93;
+}
+h4 {
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-size: 1.2em;
+    color: #333;
+}
+p {
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #333;
+}
+ul {
+    font-family:'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Serif';
+    font-size: 1em;
+    color: #00a3cc;
+    line-height: 1.5em;
+    list-style-type: 'square';
+}
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+    list-style-type: 'square';
+}
+ul.posts li {
+    list-style-type: 'square';
+}
+footer {
+    border-top: 2px solid #00a3cc;
+    font-size: .6em;
+}
+
+.homepage_portrait {
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 200px;
+    margin-left: 5px;
+    margin-right: 35px;
+    border-radius: 50%;
+}
+
+.post_image {
+    width: 100%;
+    z-index: 0;
+}
