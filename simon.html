@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style_simon.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+  <div class="row" id="color-row">
+    <div class="col-6" id="1"></div>
+    <div class="col-6" id="2"></div>
+    <div class="col-6" id="3"></div>
+    <div class="col-6" id="4"></div>
+  </div>
+  <div id="inner" class="text-center">
+    <div id="simon">Simon</div>
+    <div class="row" id="indicator-row">
+      <div class="col-4">
+        <div id="count">--</div>
+        <div id="count-label">COUNT</div>
+      </div>
+      <div class="col-4">
+        <div id="start"></div>
+        START
+      </div>
+      <div class="col-4" id="strict-box">
+        <div id="strict-light"></div>
+        <div  id="strict"></div>
+        <div id="strict-label">STRICT</div>
+      </div>
+    </div>
+    <div class="row" id="switch-row" >
+      <div class="col-4 text-right">OFF</div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <div class="col-4 text-left">ON</div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index_simon.js"></script>
+
+
+
+
+</body>
+
+</html>

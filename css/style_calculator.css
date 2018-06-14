@@ -1,0 +1,73 @@
+body {
+  background-color: gray;
+}
+
+#outline {
+  margin-top: 50px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: silver;
+  box-shadow: inset -2px -5px 15px 2px gray, 5px 5px 15px;
+}
+
+h6 {
+  margin: 15px 10px 15px 10px;
+}
+
+#displayArea {
+  border: 1px solid gray;
+  border-radius: 10px;
+  height: 75px;
+  margin: 5px 10px 10px 10px;
+  text-align: right;
+  background-color: #c1bdb2;
+  box-shadow: inset 0px 1px 2px gray;
+}
+
+#current {
+  font-size: 34px;
+  color: black;
+}
+
+#equation {
+  height: 20px;
+  color: gray;
+}
+
+.row {
+  padding-left: 0;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.col-3, .col-4, .col-8{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.col-9 {
+  padding: 0;
+  margin: 0;
+}
+.keys {
+  padding-top: 5px;
+  border: 1px solid gray; 
+  border-radius: 10px;
+  margin: 5px 0 5px 0;
+  height: 40px;
+  background-color: black;
+  color: silver;
+  box-shadow: inset 0px -2px 3px silver, 0px 2px 10px gray;
+}
+
+#ac, #ce {
+  background-color: #cc141a;
+  border-color: gray;
+}
+
+#equal {
+  height: 90%;
+}
