@@ -1,0 +1,125 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #A99985;
+  color: #DDD6C2;
+  font-family: "comic sans ms", cursive;
+  height: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#info {
+  margin: 5px;
+}
+
+button {
+  padding-top: 0px;
+  border-top: 0px;
+  border-radius: 5px;
+  height: 25px;
+}
+
+#game-box {
+  height: 400px;
+  width: 400px;
+  border: 2px solid #DAD2BC;
+  border-radius: 10px;
+  margin: 20px auto auto auto;
+  position: relative;
+  background-color: #DAD2BC;
+  color: #252323;
+}
+
+
+.ui-dialog {
+  background-color: #A99985;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  border: 8px solid #DAD2BC;
+  border-radius: 20px;
+}
+
+.ui-dialog button {
+  margin: 25px;
+}
+.ui-dialog-buttonpane {
+  height: 20px;
+  text-align: center;
+  padding-bottom: 80px;
+  margin-top: 20px;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+#dialog {
+  height: 30px !important;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 26px;
+  color: black;
+}
+
+#message {
+  padding-top: 140px;
+  font-size: 40px;
+  display: none;
+}
+
+#grid {
+  height: 300px;
+  width: 300px;
+/*   border: 2px solid blue; */
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+
+
+.col-4 {
+  border: 3px solid #70798C;
+  height: 100px;
+  margin: 0;
+  padding-top: 25px;
+  font-size: 30px;
+}
+
+.name {
+  text-align: right;
+  padding-right: 5px;
+}
+.score {
+  text-align: left;
+  padding-left: 0;
+}
+
+[id="0"], [id="3"], [id="6"] {
+  border-left: 6px solid #70798C;
+}
+
+[id="2"], [id="5"], [id="8"] {
+  border-right: 6px solid #70798C;
+}
+
+[id="0"], [id="1"], [id="2"] {
+  border-top: 6px solid #70798C;
+}
+
+[id="6"], [id="7"], [id="8"] {
+  border-bottom: 6px solid #70798C;
+}
