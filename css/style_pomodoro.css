@@ -1,0 +1,94 @@
+body {
+  background-color: coral;
+  color: white;
+}
+
+.container {
+  width: 450px;
+}
+
+.row {
+  margin-bottom: 30px;
+  clear:both;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 30px auto 40px auto;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.col-xs-4 {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.minus {
+  text-align: right;
+}
+
+.plus {
+  text-align: left;
+}
+
+.minus:hover, .plus:hover, #bottom:hover{
+  cursor: pointer;
+}
+
+#color {
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  background-color: #C7EF7F;
+  padding: 2px;
+}
+
+
+#timer {
+  border: 2px solid #C7EF7F;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  bottom: 0px;
+  left: 0px;
+  background: transparent;
+  padding: 30px;
+/*   background-image: -webkit-radial-gradient(50% 50%, circle, transparent 92px, rgba(255,255,255,1) 98px, rgba(255, 127, 80, 1) 0);
+  background-image: -moz-radial-gradient(50% 50%, circle, transparent 92px, rgba(255,255,255,1) 98px, rgba(255, 127, 80, 1) 0);
+  background-image: radial-gradient(50% 50%, circle, transparent 92px, rgba(255,255,255,1) 98px, rgba(255, 127, 80, 1) 0);
+  z-index: 1; */
+}
+
+#bottom {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  padding-top: 70px;
+/*   border: 2px solid silver;
+ */
+}
+
+#filler, #timer, #color {
+  position: absolute;  
+}
+
+
+#filler {
+/*   border: 1px solid black; */
+  background-color: coral;
+  height: 250px;
+  width: 250px;
+  top: 0px;
+  left: 0px;
+}
+
+#role, #count-down {
+  margin-top: 35px;
+  font-size: 35px;
+}
